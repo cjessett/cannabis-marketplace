@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
+import Product from './Components/Product';
 import './App.css';
+import data from './products.json';
 
 function App() {
+  const [products] = useState(data.products);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container-fluid">
+      <header className="d-flex justify-content-center mb-4">
+        <h1>Cannabis Marketplace</h1>
       </header>
+      <section className="row justify-content-center">
+        {products.map(p => <Product key={p.id} {...p} />)}
+      </section>
     </div>
   );
 }

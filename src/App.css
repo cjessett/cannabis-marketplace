@@ -1,33 +1,51 @@
-.App {
-  text-align: center;
+@gray-darker:               #444444;
+@gray-dark:                 #696969;
+@gray:                      #999999;
+@gray-light:                #cccccc;
+@gray-lighter:              #ececec;
+@gray-lightest:             lighten(@gray-lighter,4%);
+
+html {
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: @gray;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease 0s;
+  box-shadow: rgba(98, 98, 98, 0.3) 0px 1px 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover {
+  box-shadow: rgba(98, 98, 98, 0.8) 0px 1px 4px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-body > h4 {
+  font-size: 1.3rem;
+}
+
+.card-body > h5 {
+  font-size: 1rem;
+}
+
+.card-body > h6 {
+  font-size: 0.8rem;
 }

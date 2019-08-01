@@ -1,68 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Jane - Coding Challenge
 
-## Available Scripts
 
-In the project directory, you can run:
+Your job is to build a small cannabis marketplace that allows users to find products based on a search term. The scope is limited so you can focus on building an app that could be deployed tomorrow in a real production environment. The instructions below capture all the product requirements. Everything that isn’t explicitly specified is up to you to decide; use your best judgement.
 
-### `npm start`
+If you have any questions, feel free to contact your sponsor at Jane. Good luck and have fun!
+____________________________________________________________________________
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The app is split into two separate pages: 'Data Collection' and 'Products'.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The flow is as follows:
 
-### `npm test`
+### Data Collection Page
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.    The user enters her/his name (first and last), email address, phone number, home address, and search term.
 
-### `npm run build`
+2.    Email and phone are checked for validity. If invalid, display a suitable error message and don't proceed until fixed.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3.    Next, the user enters her/his home address. Home addresses should be auto-completed using the Google Maps API. If that address cannot be located, display a suitable error message and don't proceed until fixed.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+4.    Finally, the user enters a search term.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5.    Once all fields have been completed and are valid, display a 'Next' button somewhere on the page. This button should navigate the user to a 'products' page displaying all of the products relevant to the user's search term.
 
-### `npm run eject`
+6.    The search term will search against the following fields in the provided `products.json` file:
+  - `name`
+  - `brand`
+  - `category`
+  - `kind`
+  - `kind_subtype`
+  - `description`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Products Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+7.    Display the products in a grid of 'product cards'.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+8.    Each product card should include the following information.
 
-## Learn More
+  - `name`
+  - `brand`
+  - `category`
+  - `kind_subtype` (if not available, display `kind`)
+  - `photo`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+9.    In certain cases, some of the fields aren't available. In those cases, simply ignore the missing fields. However, if the product **_photo_** is missing, please use this default image: https://s3-us-west-1.amazonaws.com/iheartjane/images/stock_photos/general/indica.png
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+10.    Each card should display an 'Add to cart' button. No need to implement any functionality for this button.
 
-### Code Splitting
+11.    Somewhere on the page, display the user's address.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+12.    Somewhere on the page, display a search field and a button to allow the user to perform additional searches.
 
-### Analyzing the Bundle Size
+ 
+### Summarizing the features for each page:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1.    Data Collection Page
+  - Form with the following fields:                                    
+    - Name                                         
+    - Email address                                       
+    - Phone number                                       
+    - Address                                         
+    - Search term
+  - Next button                                         
+    - only clickable when above fields are valid                                           
+    - should take the user to the products page
 
-### Making a Progressive Web App
+2.    Products Page
+  - Grid of product cards, each with the following information:
+    - `name`                                          
+    - `brand`                                          
+    - `category`                                       
+    - `kind_subtype`                                    
+    - `photo` (use default photo when one is not available)                                        
+    - 'Add to Cart' button (non-functional)
+  - Search field with a button to allow the user to perform additional searches
+  - User's address
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+ 
+### Notes and instructions
 
-### Advanced Configuration
+1.    We use React and Typescript, and we'd love to see you use them too.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+2.    The products to search and display are contained in the provided `products.json` file.
 
-### Deployment
+3.    We appreciate beautiful and readable code.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+4.    Your design should be mobile friendly (i.e. responsive).
 
-### `npm run build` fails to minify
+5.    Bonus points if you deploy the project to a live environment.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+6.    When you're done, submit all code and files to github and send us the link (and if deployed live, the URL).
