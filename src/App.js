@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ProductsPage from './Pages/Products';
+import DataCollection from './Pages/DataCollection';
 import './App.css';
 
 function App() {
   return (
     <div className="container-fluid p-0">
-      <ProductsPage />
+      <DataCollection />
     </div>
   );
 }
