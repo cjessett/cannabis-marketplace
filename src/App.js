@@ -1,19 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import Product from './Components/Product';
+import ProductsPage from './Pages/Products';
 import './App.css';
-import data from './products.json';
 
 function App() {
-  const [products] = useState(data.products);
   return (
-    <div className="container-fluid">
-      <header className="d-flex justify-content-center mb-4">
-        <h1>Cannabis Marketplace</h1>
-      </header>
-      <section className="row justify-content-center">
-        {products.map(p => <Product key={p.id} {...p} />)}
-      </section>
+    <div className="container-fluid p-0">
+      <ProductsPage />
     </div>
   );
 }

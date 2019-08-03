@@ -5,24 +5,8 @@
 @gray-lighter:              #ececec;
 @gray-lightest:             lighten(@gray-lighter,4%);
 
-html {
-  background-color: #f0f0f0;
-}
-
-body {
-  color: @gray;
-  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
-}
-
 .card {
+  width: 13rem;
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
