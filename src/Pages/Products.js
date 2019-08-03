@@ -11,7 +11,7 @@ function ProductsPage({ count, address }) {
   return (
     <div>
       <Nav />
-      <h4 className="d-flex m-3">Found {count} products {location}</h4>
+      <h5 className="mt-3 ml-3">Found {count} products {location}</h5>
       <ProductsList />
     </div>
   );

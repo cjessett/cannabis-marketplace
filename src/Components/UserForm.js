@@ -18,7 +18,7 @@ function UserForm({ submitForm, setProductSearchQuery, history }) {
   const [state, setState] = useState('');
   const [zip, setZip] = useState('');
   const [search, setSearch] = useState('');
-  const isValid = !!firstName && !!lastName && !!phone && !!email && !!street && !!city && !!state && !!zip;
+  const isValid = [firstName, lastName, phone, email, street, city, state, zip].every(e => !!e.trim());
   function setAddress({ street, city, state, zip }) {
     setStreet(street);
     setCity(city);

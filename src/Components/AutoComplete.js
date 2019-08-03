@@ -6,7 +6,6 @@ const API_KEY = 'AIzaSyCc5ia8Pnxl2pVK_tgri6jmtZJAHCq8uAU'
 export default class AutoComplete extends Component {
   constructor(props) {
     super(props);    
-    this.state = { predictions: [] };
     this.autocompleteInput = React.createRef();
     this.autocomplete = null;
     this.handleScriptLoad = this.handleScriptLoad.bind(this);
