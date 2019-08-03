@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
+import { setUserData } from '../store/ducks/user';
+import { setSearchValue } from '../store/ducks/products';
 
 import Input from './Input';
 import AutoComplete from './AutoComplete';
 
-export default function UserForm() {
+function UserForm({ submitForm, setProductSearchQuery, history }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phone, setPhone] = useState('');
@@ -13,13 +18,18 @@ export default function UserForm() {
   const [state, setState] = useState('');
   const [zip, setZip] = useState('');
   const [search, setSearch] = useState('');
+  const isValid = !!firstName && !!lastName && !!phone && !!email && !!street && !!city && !!state && !!zip;
   function setAddress({ street, city, state, zip }) {
     setStreet(street);
     setCity(city);
     setState(state);
     setZip(zip);
   }
-  const isValid = !!firstName && !!lastName && !!phone && !!email && !!street && !!city && !!state && !!zip;
+  function handleSubmit() {
+    submitForm({ firstName, lastName, phone, email, street, city, state, zip });
+    setProductSearchQuery(search);
+    history.push('/products');
+  }
   return (
     <form>
       <div className="form-row">
@@ -44,7 +54,9 @@ export default function UserForm() {
       <div className="form-row">
         <Input id="search" type="text" label="Product search" placeholder="Try CBD, flower, or hybrid" value={search} onChange={setSearch} classes="col-md-6 mb-3" />
       </div>
-      <button className="btn btn-primary" type="submit" disabled={!isValid}>Next</button>
+      <button className="btn btn-primary" type="submit" onClick={handleSubmit} disabled={!isValid}>Next</button>
     </form>
   );
 }
+
+export default withRouter(connect(null, { submitForm: setUserData, setProductSearchQuery: setSearchValue })(UserForm));
