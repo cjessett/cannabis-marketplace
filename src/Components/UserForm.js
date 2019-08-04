@@ -23,7 +23,8 @@ function UserForm({ submitForm, setProductSearchQuery, history }) {
     setCity(city);
     setState(state);
   }
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault();
     submitForm({ firstName, lastName, phone, email, street, city, state });
     setProductSearchQuery(search);
     history.push('/products');
@@ -35,7 +36,7 @@ function UserForm({ submitForm, setProductSearchQuery, history }) {
         <Input id="lastName" type="text" placeholder="Last name" value={lastName} onChange={setLastName} classes="col-md-6 mb-3" required/>
       </div>
       <div className="form-row">
-        <Input id="phone" type="tel" label="Phone" placeholder="Format: 123-456-7890" value={phone} onChange={setPhone} classes="col-md-6 mb-3" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+        <Input id="phone" type="tel" label="Phone" placeholder="Format: 1234567890" value={phone} onChange={setPhone} classes="col-md-6 mb-3" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required/>
         <Input id="email" type="email" placeholder="Email" value={email} onChange={setEmail} classes="col-md-6 mb-3" required/>
       </div>
       <div className="form-row">
