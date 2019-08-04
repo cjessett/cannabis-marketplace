@@ -29,7 +29,7 @@ function UserForm({ submitForm, setProductSearchQuery, history }) {
     history.push('/products');
   }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="form-row">
         <Input id="firstName" type="text" placeholder="First name" value={firstName} onChange={setFirstName} classes="col-md-6 mb-3" required/>
         <Input id="lastName" type="text" placeholder="Last name" value={lastName} onChange={setLastName} classes="col-md-6 mb-3" required/>
@@ -51,7 +51,7 @@ function UserForm({ submitForm, setProductSearchQuery, history }) {
       <div className="form-row">
         <Input id="search" type="text" label="Product search" placeholder="Try CBD, flower, or hybrid" value={search} onChange={setSearch} classes="col-md-6 mb-3" />
       </div>
-      <button className="btn btn-primary" type="submit" onClick={handleSubmit} disabled={!isValid}>Next</button>
+      <button className="btn btn-primary" type="submit" disabled={!isValid}>Next</button>
     </form>
   );
 }
