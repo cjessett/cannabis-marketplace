@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "homepage": "https://cjessett.github.io/cannabis-marketplace/",
+  "start_url": ".",
   "devDependencies": {
     "react-scripts": "3.0.1",
     "redux-devtools-extension": "^2.13.8",
