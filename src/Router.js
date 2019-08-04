@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Route path='/' exact component={DataCollection} />
       <Route path='/products/' component={ProductsPage} />
     </Router>

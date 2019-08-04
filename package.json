@@ -2,9 +2,12 @@
   "name": "cannabis-marketplace",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://cjessett.github.io/cannabis-marketplace",
+  "start_url": ".",
   "devDependencies": {
     "react-scripts": "3.0.1",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "gh-pages": "2.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -17,6 +20,8 @@
     "redux": "^4.0.4"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
