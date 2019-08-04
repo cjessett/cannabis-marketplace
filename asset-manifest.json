@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cannabis-marketplace/static/css/main.8c2c3e82.chunk.css",
-    "main.js": "/cannabis-marketplace/static/js/main.83ee4400.chunk.js",
-    "main.js.map": "/cannabis-marketplace/static/js/main.83ee4400.chunk.js.map",
+    "main.js": "/cannabis-marketplace/static/js/main.52493ef5.chunk.js",
+    "main.js.map": "/cannabis-marketplace/static/js/main.52493ef5.chunk.js.map",
     "runtime~main.js": "/cannabis-marketplace/static/js/runtime~main.ac2aa6f1.js",
     "runtime~main.js.map": "/cannabis-marketplace/static/js/runtime~main.ac2aa6f1.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/cannabis-marketplace/static/css/2.22a7d4ef.chunk.css",
     "static/js/2.252daa2a.chunk.js": "/cannabis-marketplace/static/js/2.252daa2a.chunk.js",
     "static/js/2.252daa2a.chunk.js.map": "/cannabis-marketplace/static/js/2.252daa2a.chunk.js.map",
     "index.html": "/cannabis-marketplace/index.html",
-    "precache-manifest.eae9e032782b616bd5fb2438a2f68a08.js": "/cannabis-marketplace/precache-manifest.eae9e032782b616bd5fb2438a2f68a08.js",
+    "precache-manifest.52c5d2a46e1c6cf520a933c0699cc3fb.js": "/cannabis-marketplace/precache-manifest.52c5d2a46e1c6cf520a933c0699cc3fb.js",
     "service-worker.js": "/cannabis-marketplace/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/cannabis-marketplace/static/css/2.22a7d4ef.chunk.css.map",
     "static/css/main.8c2c3e82.chunk.css.map": "/cannabis-marketplace/static/css/main.8c2c3e82.chunk.css.map"
