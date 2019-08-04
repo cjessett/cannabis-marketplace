@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8f26bb7faad6898ca296aed51103255c",
+    "revision": "99d62350b9c71e5ecccb84f1f287bf0b",
     "url": "/cannabis-marketplace/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cannabis-marketplace/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "95c4d8a269e5b67613e6",
+    "revision": "163f0448fa3cc501de89",
     "url": "/cannabis-marketplace/static/css/main.8c2c3e82.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cannabis-marketplace/static/js/2.252daa2a.chunk.js"
   },
   {
-    "revision": "95c4d8a269e5b67613e6",
-    "url": "/cannabis-marketplace/static/js/main.1bfd38e2.chunk.js"
+    "revision": "163f0448fa3cc501de89",
+    "url": "/cannabis-marketplace/static/js/main.83ee4400.chunk.js"
   },
   {
     "revision": "9338a7204e5f44aebcf7",
