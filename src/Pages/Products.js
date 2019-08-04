@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { getVisibleProducts } from '../store/ducks/products';
 
@@ -12,6 +13,7 @@ function ProductsPage({ count, address }) {
     <div>
       <Nav />
       <h5 className="mt-3 ml-3">Found {count} products {location}</h5>
+      <Link to="/" className="ml-3">Change Location</Link>
       <ProductsList />
     </div>
   );

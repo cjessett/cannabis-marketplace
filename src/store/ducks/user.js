@@ -13,14 +13,13 @@ const initialState = {
   street: '',
   city: '',
   state: '',
-  zip: '',
   hasLocation: false,
 };
 
 export default function(state = initialState, { type, payload }) {
   switch (type) {
     case SET_VALUES:
-      const { firstName, lastName, email, phone, street, city, state: addressState, zip } = payload;
+      const { firstName, lastName, email, phone, street, city, state: addressState } = payload;
       return {
         ...state,
         firstName,
@@ -30,7 +29,6 @@ export default function(state = initialState, { type, payload }) {
         street,
         city,
         state: addressState,
-        zip,
         hasLocation: true
       }
     default:
